@@ -42,9 +42,6 @@ struct ContentView: View {
                             viewModel.fetchUsers()
                         }
                         .padding()
-                } else {
-                    Text("No more users")
-                        .padding()
                 }
             }
             .navigationTitle("GitHub Users")

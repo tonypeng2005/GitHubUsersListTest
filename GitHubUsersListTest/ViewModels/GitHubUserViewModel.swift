@@ -15,10 +15,11 @@ class GitHubUsersViewModel: ObservableObject {
     
     private var since = 0
     private let per_page = 20
+    private let maxUsers = 100
     private var cancellables = Set<AnyCancellable>()
     
     func fetchUsers() {
-        guard !isLoading && hasMore else { return }
+        guard !isLoading, users.count < maxUsers, hasMore else { return }
         
         isLoading = true
         let urlString = "https://api.github.com/users?since=\(since * per_page)&per_page=\(per_page)"
@@ -38,8 +39,12 @@ class GitHubUsersViewModel: ObservableObject {
                 if newUsers.isEmpty {
                     self.hasMore = false
                 } else {
-                    self.users.append(contentsOf: newUsers)
+                    let remain = self.maxUsers - self.users.count
+                    self.users.append(contentsOf: Array(newUsers.prefix(remain)))
                     self.since += 1
+                    if self.users.count >= self.maxUsers {
+                        self.hasMore = false
+                    }
                 }
                 self.isLoading = false
             })
