@@ -1,21 +1,22 @@
-GitHubUsersListTest
+# GitHubUsersListTest
 
-Use MVVM, Swift and SwiftUI to build a GitHub users list app.
+## Use MVVM, Swift and SwiftUI to build a GitHub users list app.
 
-Models\GitHubUser.swift
+### Models\GitHubUser.swift
   Represent a GitHub user.
 
-Models\GitHubUserDetail.swift
+### Models\GitHubUserDetail.swift
   Represent a GitHub user detail data.
 
-Views\GitHubUserDetailView.swift
+### Views\GitHubUserDetailView.swift
+  Use GitHubUserDetailViewModel to fetch user detail and display.
 
-ViewModels\GitHubUserViewModel.swift
+### ViewModels\GitHubUserViewModel.swift
   Handling fetch GitHub users API.
 
-ViewModels\GitHubUserDetailViewModel.swift
+### ViewModels\GitHubUserDetailViewModel.swift
   Handleing fetch GitHub user detail api.
 
-ContentView.swift
+### ContentView.swift
   Use GitHubUserViewModel to fetch users list and display
 
