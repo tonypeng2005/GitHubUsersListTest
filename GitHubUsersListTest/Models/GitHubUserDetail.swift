@@ -17,4 +17,5 @@ struct GitHubUserDetail: Decodable {
     let following: Int
     let avatar_url: String
     let html_url: String
+    let location: String?
 }

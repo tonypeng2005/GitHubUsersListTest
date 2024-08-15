@@ -38,6 +38,11 @@ struct GitHubUserDetailView: View {
                 if let bio = user.bio {
                     Text("Bio: \(bio)")
                 }
+                if let location = user.location {
+                    Text("Location: \(location)")
+                } else {
+                    Text("Location: Unknown")
+                }
                 if let blog = user.blog {
                     Text("Blog: \(blog)")
                 }
