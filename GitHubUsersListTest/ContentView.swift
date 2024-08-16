@@ -18,16 +18,16 @@ struct ContentView: View {
                     ForEach(viewModel.users) { user in
                         NavigationLink(destination: GitHubUserDetailView(username: user.login)) {
                             HStack {
-                                AsyncImage(url: URL(string: user.avatar_url)) { image in
-                                    image
-                                        .resizable()
-                                        .scaledToFill()
+                                if let url = URL(string: user.avatar_url) {
+                                    CachedAsyncImage(url: url)
                                         .frame(width: 50, height: 50)
                                         .clipShape(Circle())
-                                } placeholder: {
-                                    ProgressView()
+                                } else {
+                                    Image(systemName: "person.crop.circle.fill")
+                                        .frame(width: 50, height: 50)
+                                        .clipShape(Circle())
                                 }
-                                
+
                                 Text(user.login)
                                     .font(.headline)
                             }
