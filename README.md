@@ -2,6 +2,9 @@
 
 ## Use MVVM, Swift and SwiftUI to build a GitHub users list app.
 
+### Utils\NetworkMonitor.swift
+  To check if network is available
+
 ### Models\GitHubUser.swift
   Represent a GitHub user.
 

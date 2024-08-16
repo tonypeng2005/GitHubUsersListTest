@@ -16,6 +16,7 @@
 		61363F2C2C6E0D72009B98DD /* GitHubUserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61363F2B2C6E0D72009B98DD /* GitHubUserDetail.swift */; };
 		61363F2E2C6E0DC5009B98DD /* GitHubUserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61363F2D2C6E0DC5009B98DD /* GitHubUserDetailViewModel.swift */; };
 		61363F302C6E0E56009B98DD /* GitHubUserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61363F2F2C6E0E56009B98DD /* GitHubUserDetailView.swift */; };
+		61363F342C6ED821009B98DD /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61363F332C6ED821009B98DD /* NetworkMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		61363F2B2C6E0D72009B98DD /* GitHubUserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUserDetail.swift; sourceTree = "<group>"; };
 		61363F2D2C6E0DC5009B98DD /* GitHubUserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUserDetailViewModel.swift; sourceTree = "<group>"; };
 		61363F2F2C6E0E56009B98DD /* GitHubUserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUserDetailView.swift; sourceTree = "<group>"; };
+		61363F332C6ED821009B98DD /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		61363F132C6DF55C009B98DD /* GitHubUsersListTest */ = {
 			isa = PBXGroup;
 			children = (
+				61363F322C6ED80C009B98DD /* Utils */,
 				61363F222C6DF839009B98DD /* Models */,
 				61363F232C6DF851009B98DD /* Views */,
 				61363F242C6DF857009B98DD /* ViewModels */,
@@ -104,6 +107,14 @@
 				61363F2D2C6E0DC5009B98DD /* GitHubUserDetailViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		61363F322C6ED80C009B98DD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				61363F332C6ED821009B98DD /* NetworkMonitor.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61363F262C6DF88F009B98DD /* GitHubUser.swift in Sources */,
+				61363F342C6ED821009B98DD /* NetworkMonitor.swift in Sources */,
 				61363F172C6DF55C009B98DD /* ContentView.swift in Sources */,
 				61363F302C6E0E56009B98DD /* GitHubUserDetailView.swift in Sources */,
 				61363F2A2C6E0CDA009B98DD /* GitHubUserViewModel.swift in Sources */,
